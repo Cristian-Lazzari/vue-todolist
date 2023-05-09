@@ -1,0 +1,21 @@
+.container{
+    text-align: center;
+}
+ul{
+    list-style: none;
+    padding-inline-start: 0;
+}
+.cutted{
+    text-decoration: line-through;
+}
+.delete-btn{
+    margin-left: 3rem;
+    border: 2px solid black;
+    padding: 0.3rem;
+}
+.container div{
+    margin-top: 1rem;
+}
+.container div div{
+    margin-top: 1.5rem;
+}

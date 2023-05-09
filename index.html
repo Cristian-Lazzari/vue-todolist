@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer ></script>
+    <script src="script.js" defer ></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root" class="container">
+        <h2>YOUR TODO LIST-MAKER</h2>
+        <input v-model="itemid" type="text">
+        <button @click="additem(itemid)">inserisci</button>
+        <div style="color: red;" v-show="error" class="h5">SCEMO</div>
+        <div v-for="(todo, i) in todolist" v-show="todolist.leght != 0">
+            <span @click="doItem(todo)" :class="{cutted : todo.done}">{{todo.id}} </span>
+            <span @click="deleteItem(i)" class="delete-btn">x</span>
+            
+        </div>
+        <h3 v-show="todolist.leght == 0">you haven't any item</h3>
+    </div>
+    
+</body>
+</html>
